@@ -1,0 +1,13 @@
+services:
+  ubuntu24:
+    platform: linux/amd64
+    build: .
+    container_name: pixi-rstudio
+    tty: true
+    stdin_open: true
+    ports:
+      - 8787:8787
+    volumes:
+      - ./project:/home/rstudio/project
+    user: root
+
